@@ -286,23 +286,105 @@ V. ЗАКЛЮЧНІ ПОЛОЖЕННЯ
 
 </div><!оферта>
 <!------------------------------------------------------------------------------>
-<center><div id="data" width="250px" style="display: none;">
-<form dark>
-  <label for="start">Будь ласка введіть бажану дату прибуття:&nbsp</label>
-  <p><input type="date"  id="start" name="trip-start"></p>
-  <p><label for="finihs">Будь ласка введіть бажану дату від'їзду:&nbsp</label></p>
-  <input type="date" id="finihs" name="trip-finihs">
-  <div class="form-group" >
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control"  id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <button type="button" id="hider2" class="btn btn-warning btn-lg btn-block" >ПРИЙНЯТИ І ПРОДОВЖИТИ</button>
+<style type="text/css">
+   .time {
+    max-width: 400px;
+    background:#433523;
+    color:#FBF8E9;
+    padding: 20px;
+    padding-right: 20px;
+    border: solid 1px black;
+    margin: auto;
+    }
+
+  </style>
+<!------------------------------------------------------------------------------>
+
+<div id="data" class="time" style="display: none;">
+<form >
+<div id="taim"><!час і люди>
+
+  <label for="start">Будь ласка введіть бажану дату прибуття:</label>
+  <input type="date"  id="start" name="trip-start"><br>
+  <label for="finihs">Будь ласка введіть бажану дату від'їзду:</label><br>
+  <input type="date" id="finihs" name="trip-finihs"><br>
+<label for="dorosli">Кількість дорослих:</label><br>
+<select class="custom-select" id="dorosli"><br><br>
+  <option selected>Один</option>
+  <option value="1">Два</option>
+  <option value="2">Три</option>
+  <option value="3">Чотири</option>
+</select>
+<label for="dorosli">Кількість дітей:</label><br>
+<select class="custom-select" id="dorosli">
+  <option selected>Один</option>
+  <option value="1">Два</option>
+</select>
+<br>
+<hr noshade size="2"></Hr>
+<button type="button" id="hider2" class="btn btn-warning btn-lg btn-block" >перевірити наявність місць</button>
+<script>
+  document.getElementById('hider2').onclick = function() {
+  document.getElementById('check').style="display: block;";
+  document.getElementById('taim').style="display: none;"
+}
+</script>
+</div><!час і люди>
+<!------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------->
+
+<div id="check" style="display: none;"><!check>
+<!------------------------------------------------------------------------------->
+<br><br><br>Тут буде модуль перевірки<br><br><br>
+<!------------------------------------------------------------------------------->
+<hr noshade size="2"></Hr>
+<button type="button" id="hider3" class="btn btn-warning btn-lg btn-block" >Далі</button>
+<script>
+  document.getElementById('hider3').onclick = function() {
+  document.getElementById('fio').style="display: block;";
+  document.getElementById('check').style="display: none;"
+}
+</script>
+</div><!check>
+<!------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------->
+   <div class="form-group" id="fio" style="display: none;"><!fio>
+
+    <label for="email">Поштова адреса @</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com" >
+    <label for="text_first name">Прізвище</label>
+    <input type="text" class="form-control" id="text_first name" placeholder="Прізвище" >
+    <label for="text_second name">Ім'я</label>
+    <input type="text" class="form-control" id="text_second name" placeholder="Ім'я" >
+    <label for="ttext_father name">По батькові</label>
+    <input type="text" class="form-control" id="text_father name" placeholder="По батькові" >
+    <label for="phone">Телефон</label>
+    <input type="number" class="form-control" id="phone" placeholder="0_ _  _ _ _ _ _ _ _">
+    <br>
+    <hr noshade size="2"></Hr>
+    <button type="button" id="hider2" class="btn btn-warning btn-lg btn-block" >Далі</button>
+
+  </div><!fio>
+   <div>
+   </div>
+
+
+
+
 
 </form>
-</div><!data></center>
+</div><!booking>
+<!------------------------------------------------------------------------------>
+
+<div id="div_booking" class="booking" style="display: none;">
+
+
+</div><!div_booking>
+
 
 </div><!display>
 </form>
+
 
 
 
